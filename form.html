@@ -6,14 +6,14 @@
 	<body bgcolor="">
 		<form action='save.php' method='get'>
 			<label>First Name</label>
-			<input type="text" name='first_name'>
+			<input type="text" name='first_name' required maxlength=5 value="digmbar">
 			<br><br>
 			<label>Last Name</label>
-			<input type="text" name='last_name'>
+			<input type="text" name='last_name' autofocus autocomplete="off" placeholder="enter last name">
 			
 			<br><br>
 			<label>mobile No</label>
-			<input type="number" name='mobile_no'>
+			<input type="number" name='mobile_no' max=50 min=45>
 			
 			<br><br>
 			<label>Password</label>
@@ -43,12 +43,49 @@
 			<input type="week" name='date'>
 			
 			<br><br>
-			
 			<label>date</label>
 			<input type="month" name='date'>
 			
 			<br><br>
-			<input type='submit'>
+			<label>photo</label>
+			<input type="file" name='date' accept="image/*">
+			
+			<br><br>
+			<label>Gender</label>
+			<input type="radio" name='gender' value="m"  checked>Male
+			<input type="radio" name='gender' value="f" checked>Female
+			
+			<br><br>
+			<label>Lang</label>
+			<input type="checkbox" name='lang[]' value="c"  checked>C programming
+			<input type="checkbox" name='lang[]' value="c++"  checked>C++
+			<input type="checkbox" name='lang[]' value="html"  checked>html
+			<input type="checkbox" name='lang[]' value="java">java
+			
+			<br><br>
+			<label>city</label>
+			<select name="city" multiple>
+				<option>Jalgaon</option>
+				<option selected>pune</option>
+				<option>nashik</option>
+				<option>mumbai</option>
+				<option>pachora</option>
+				<option>40 gaon</option>
+				
+			</select>
+			<br><br>
+			<label>Address</label>
+			<textarea name="address" rows=5 cols=50>welcome</textarea>
+			
+			<br><br>
+			<input type='submit' value="Login">
+			<input type='reset'>
+			<input type='button' value="custom btn">
+			
+			<button type="submit"><h1>save</h1></button>
+			<button type="button">
+				<a href="">click here</a>
+			</button>
 			
 		</form>
 	</body>
