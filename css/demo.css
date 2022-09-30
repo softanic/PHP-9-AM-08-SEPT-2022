@@ -1,0 +1,13 @@
+u,a,del{
+				color:red;
+				text-decoration:none;
+				text-transform:capitalize;
+				
+			}
+			p{
+				text-align:justify;
+				text-indent:100px;
+				word-spacing:20px;
+				letter-spacing:10px;
+				line-height:30px;
+			}
