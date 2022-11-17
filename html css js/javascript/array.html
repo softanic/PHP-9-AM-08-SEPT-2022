@@ -1,0 +1,23 @@
+<html>
+	<body>
+		<script>
+			var students=["gargi",'harshada','devyani','lalita','harshal'];
+			students.push('xyz')
+			//students.pop()
+			delete(students[1]);
+			
+			/*for(i=0;i<students.length;i++)
+			{
+			//document.write(students[i]+"<br>");
+				welcome(students[i]);
+			}*/
+			students.forEach(welcome);
+			
+			
+			function welcome(name)
+			{
+				alert('welcome '+name);
+			}
+		</script>
+	</body>
+</html>

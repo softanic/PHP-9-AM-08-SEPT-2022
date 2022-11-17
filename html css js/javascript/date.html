@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<h1 id="clock"></h1>
+		<script>
+			function date()
+			{
+				var date=new Date();
+				//document.write(date);
+				//document.write(date.getFullYear())
+				//document.write(date.getMonth())
+				//document.write(date.getDate())
+				var days=['sun','mon','tue','wed','thi'];
+				//alert(days[date.getDay()]);
+				//document.write(days[date.getDay()])
+				data =date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+":"+date.getMilliseconds();
+				document.getElementById('clock').innerHTML=data;
+				
+				setTimeout("date()",1);
+			}
+			date();	
+		</script>
+		
+	</body>
+</html>
