@@ -19,7 +19,9 @@ while($row=mysqli_fetch_array($result))
 	echo "<td>".$row['email_id']."</td>";
 	echo "<td>".$row['password']."</td>";
 	echo "<td>".$row['city']."</td>";
-	echo "<td><a onclick='return confirm(\" are u sure? \")' href='delete.php?user_id=".$row['user_id']."'>Delete</a></td>";
+	echo "<td><a  href='update-form.php?user_id=".$row['user_id']."'>update</a>";
+	
+	echo " | <a onclick='return confirm(\" are u sure? \")' href='delete.php?user_id=".$row['user_id']."'>Delete</a></td>";
 	
 	echo "</tr> \n";
 	
