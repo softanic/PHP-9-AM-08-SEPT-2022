@@ -1,4 +1,5 @@
 <?php
+session_start();
 $mobile_no=$_POST['mobile_no'];
 $password=$_POST['password'];
 
@@ -11,7 +12,9 @@ $data=mysqli_fetch_array($res);
 if($count >0)
 {
 	//echo "login success";
-	header("location:home.php?id=".$data['user_id']);
+	
+	$_SESSION['user']=$data;
+	header("location:home.php");
 }else{
 	
 	echo "<script>alert('Your username/password is wrong, please try again.');window.history.back();</script>";
