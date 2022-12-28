@@ -8,7 +8,7 @@
 			<input type="text" name="password"><br><br>
 			
 			<input type="submit" value="Login"><br><br>
-			
+			<a href="forget-password.php">Forgot password?</a>
 		</form>
 	</body>
 </html>

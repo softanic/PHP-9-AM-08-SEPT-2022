@@ -1,7 +1,7 @@
 <?php
 session_start();
 $mobile_no=$_POST['mobile_no'];
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 
 $conn=mysqli_connect("localhost","root","","php9am");
 $q="select * from users where mobile_no='$mobile_no' and password='$password'";

@@ -9,7 +9,7 @@ if(!isset($_SESSION['user']))
 
 $data= $_SESSION['user'];
 
-print_r($data);
+//print_r($data);
 /*
 $conn=mysqli_connect("localhost","root","","php9am");
 $q="select * from users where user_id=$user_id";
@@ -20,4 +20,5 @@ $data=mysqli_fetch_array($res);*/
 
 echo "<h1>welcome {$data['name']}</h1>"
 ?>
+<a href="change-password.php">Change Password</a>
 <a href="logout.php">Logout</a>
