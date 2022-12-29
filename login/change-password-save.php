@@ -14,7 +14,7 @@ $res=mysqli_query($conn,$q);
 $count=mysqli_num_rows($res);
 if($count > 0 and $new==$confirm)
 {
-	$q2="update users set password='".md5($new)."' where user_id=$user_id";
+	$q2="update users set password='".md5($new)."',reset_password=0 where user_id=$user_id";
 	$res=mysqli_query($conn,$q2);
 	if(mysqli_affected_rows($conn)>0)
 	{

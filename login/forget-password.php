@@ -1,6 +1,6 @@
 <html>
 	<body>
-		<form action="forget-password-check.php" method="post">
+		<form action="forget-password-reset.php" method="post">
 			<label>Mobile No</label><br>
 			<input type="text" name="mobile_no"><br><br>
 		

@@ -14,7 +14,12 @@ if($count >0)
 	//echo "login success";
 	
 	$_SESSION['user']=$data;
-	header("location:home.php");
+	if($data['reset_password']==1)
+	{
+		header("location:change-password.php");
+	}else{
+		header("location:home.php");
+	}
 }else{
 	
 	echo "<script>alert('Your username/password is wrong, please try again.');window.history.back();</script>";
