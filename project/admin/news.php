@@ -64,6 +64,7 @@ include 'header.php';
                                                 <td><?php echo $news['city']; ?></td>
 												<td><a href="news-update.php?news_id=<?php echo $news['news_id']; ?>">Update</a></td>
                                             </tr>
+											
 											<?php
 											
 											 }

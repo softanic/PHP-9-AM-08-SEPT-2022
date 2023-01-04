@@ -1,5 +1,14 @@
 <?php
 include 'db.php';
+session_start();
+
+if(!isset($_SESSION['user']))
+{
+	header("location:login.php");
+	
+}
+
+$data= $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

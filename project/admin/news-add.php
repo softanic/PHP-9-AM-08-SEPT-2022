@@ -2,7 +2,7 @@
 include 'header.php';
 ?>
 
-<ol class="breadcrumb bg-transparent align-self-center m-0 p-0 ml-auto">
+				<ol class="breadcrumb bg-transparent align-self-center m-0 p-0 ml-auto">
                     <li class="breadcrumb-item"><a href="#">Application</a></li>
                     <li class="breadcrumb-item active">Dashboard</li>
                 </ol>
@@ -46,47 +46,33 @@ include 'header.php';
                                                         <input type="Text" name='title' required class="form-control rounded" id="inputEmail4" placeholder="News title">
                                                     </div>
                                                     <div class="form-group col-md-6">
-                                                        <label for="inputPassword4">Password</label>
-                                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                                        <label for="inputPassword4">Desc</label>
+                                                        <input type="text" class="form-control" name="desc">
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputAddress">Address</label>
-                                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputAddress2">Address 2</label>
-                                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                                                </div>
-                                                <div class="form-row">
+                                               
+													<div class="form-group col-md-6">
+														<label for="inputAddress">date</label>
+														<input type="date" class="form-control" name='date'>
+													</div>
+													<div class="form-group col-md-6">
+														<label for="inputAddress2">Type</label>
+														<input type="text" class="form-control" name='type'>
+													</div>
+                                                
+                                               
+													<div class="form-group  col-md-6">
+														<label for="inputAddress2">city</label>
+														<input type="text" class="form-control" name='city'>
+													</div>
                                                     <div class="form-group col-md-6">
-                                                        <label for="inputCity">City</label>
-                                                        <input type="text" class="form-control" id="inputCity">
+                                                        <label for="inputCity">Reporter</label>
+                                                        <input type="text" class="form-control" name='reporter'>
                                                     </div>
-                                                    <div class="form-group col-md-4">
-                                                        <label for="inputState">State</label>
-                                                        <select id="inputState" class="form-control">
-                                                            <option selected>Choose...</option>
-                                                            <option>...</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group col-md-2">
-                                                        <label for="inputZip">Zip</label>
-                                                        <input type="text" class="form-control" id="inputZip">
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="inputDate">Date</label>
-                                                        <input type="text" class="form-control datepicker" id="inputDate">
-                                                    </div>
+                                                    
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked="">
-                                                        <label class="custom-control-label" for="checkbox-signin">Remember me</label>
-                                                    </div>
-                                                </div>
+                                                
 
-                                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                                <button type="submit" class="btn btn-primary">Add News</button>
                                             </form>
                                         </div>
                                     </div>
