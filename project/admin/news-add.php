@@ -45,6 +45,23 @@ include 'header.php';
                                                         <label for="inputEmail4">Title</label>
                                                         <input type="Text" name='title' required class="form-control rounded" id="inputEmail4" placeholder="News title">
                                                     </div>
+													<div class="form-group col-md-6">
+                                                        <label for="inputEmail4">News Category</label>
+                                                        <select required class="form-control rounded" name='cat_id'>
+														<?php
+											
+															$q="select * from categories";
+															 $res=mysqli_query($conn,$q);
+															
+															 while($cat=mysqli_fetch_array($res))
+															 {
+																echo "<option value='{$cat[0]}'>{$cat['name']}</option>";
+															 }
+															?>
+														</select>
+                                                    </div>
+													
+													
                                                     <div class="form-group col-md-6">
                                                         <label for="inputPassword4">Desc</label>
                                                         <input type="text" class="form-control" name="desc">

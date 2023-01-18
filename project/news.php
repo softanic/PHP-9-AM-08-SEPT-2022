@@ -29,7 +29,13 @@ include 'header.php';
 
 			<?php
 			$conn=mysqli_connect("localhost","root","","php9am");
-			$q="select * from news";
+			if(isset($_REQUEST['cat_id']))
+			{
+				$q="select * from news where cat_id=".$_REQUEST['cat_id'];
+			}else{
+				
+				$q="select * from news";
+			}
 			$res=mysqli_query($conn,$q);
 			while($news=mysqli_fetch_array($res))
 			{
@@ -91,12 +97,20 @@ include 'header.php';
               <h3 class="sidebar-title">Categories</h3>
               <div class="sidebar-item categories">
                 <ul>
-                  <li><a href="#">General <span>(25)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(5)</span></a></li>
-                  <li><a href="#">Design <span>(22)</span></a></li>
-                  <li><a href="#">Creative <span>(8)</span></a></li>
-                  <li><a href="#">Educaion <span>(14)</span></a></li>
+				<?php
+				$q2="select * from categories";
+				$res2=mysqli_query($conn,$q2);
+				while($cat=mysqli_fetch_array($res2))
+				{
+					$q_count="select count(*) from news where cat_id=".$cat['cat_id'];
+					$res_count=mysqli_query($conn,$q_count);
+					$count=mysqli_fetch_array($res_count)[0];
+					
+				
+					echo "<li><a href='news.php?cat_id={$cat['cat_id']}'>{$cat['name']} <span>($count)</span></a></li>";
+				}
+				?>
+                  
                 </ul>
               </div><!-- End sidebar categories-->
 

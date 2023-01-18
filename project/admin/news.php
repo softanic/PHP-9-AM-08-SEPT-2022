@@ -43,6 +43,7 @@ include 'header.php';
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Title</th>
+												<th scope="col">cat</th>
                                                 <th scope="col">date</th>
                                                 <th scope="col">city</th>
 												<th scope="col">Action</th>
@@ -51,15 +52,27 @@ include 'header.php';
                                         <tbody>
 											<?php
 											
-											$q="select * from news";
+											//$q="select * from news";
+											$q="SELECT n.*,c.* FROM `news` n left join categories c on n.cat_id=c.cat_id";
+
 											 $res=mysqli_query($conn,$q);
 											 $c=1;
 											 while($news=mysqli_fetch_array($res))
 											 {
+												/* $cat_id=$news['cat_id'];
+												 $q2="select * from categories where cat_id=$cat_id";
+												 $res2=mysqli_query($conn,$q2);
+												 $cat=mysqli_fetch_array($res2);
+												 */
+												 
+												 
 											?>
                                             <tr>
                                                 <th scope="row"><?php echo $c++; ?></th>
                                                 <td><?php echo $news['title']; ?></td>
+												
+												<td><?php echo $news['name']; ?></td>
+												
                                                 <td><?php echo $news['date']; ?></td>
                                                 <td><?php echo $news['city']; ?></td>
 												<td><a href="news-update.php?news_id=<?php echo $news['news_id']; ?>">Update</a></td>
